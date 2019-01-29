@@ -29,6 +29,10 @@ public class Static : MonoBehaviour {
         img.material.mainTexture = noiseTex;
 	}
 	
+
+    /// <summary>
+    /// Noise calculation making the TV screen movement
+    /// </summary>
     void CalcNoise()
     {
         // For each pixel in the texture...

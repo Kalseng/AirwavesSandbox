@@ -50,6 +50,9 @@ public class Channel : MonoBehaviour {
 		
 	}
 
+    /// <summary>
+    /// Calculates the opacity for each images in the level depending upon the anetena position
+    /// </summary>
     void calculateOpacity()
     {
         Vector2 antLeft = antm.GetLeftPos();
@@ -99,6 +102,7 @@ public class Channel : MonoBehaviour {
             img.color = newCol;
         }
 
+        // reduces noise to make image visible
         if( diffPercent < 1.0f)
         {
             stat.GetComponent<AudioSource>().volume = 1.0f - diffPercent;
